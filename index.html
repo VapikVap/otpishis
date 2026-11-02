@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Отпишись — как отменить подписку</title>
+  <meta name="description" content="Бесплатный открытый справочник: как отменить подписку на любой сервис, вернуть деньги за списание и составить претензию.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <h1>Отпишись</h1>
+      <p class="lead">Как отменить подписку, остановить автосписания и вернуть деньги. Бесплатно, без регистрации, с открытым кодом.</p>
+      <nav class="tabs" role="tablist">
+        <button class="tab active" data-tab="catalog" role="tab">Как отменить</button>
+        <button class="tab" data-tab="refund" role="tab">Уже списали</button>
+        <button class="tab" data-tab="claim" role="tab">Претензия</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="catalog" class="panel active">
+      <input id="q" type="search" placeholder="Название сервиса, банка или оператора…" autocomplete="off" autofocus>
+      <div id="cats" class="chips"></div>
+      <p class="warn">Интерфейсы сервисов меняются. Если шаги не совпадают — <a href="https://github.com/VapikVap/otpishis/issues/new?template=fix.yml" target="_blank" rel="noopener">сообщите</a>, поправим.</p>
+      <div id="list" class="list"></div>
+      <p id="empty" class="empty" hidden>Такого сервиса пока нет. <a href="https://github.com/VapikVap/otpishis/issues/new?template=add.yml" target="_blank" rel="noopener">Предложите его</a> — или посмотрите универсальные способы ниже.</p>
+      <div class="card universal">
+        <h3>Не нашли сервис? Универсальный порядок</h3>
+        <ol>
+          <li>Вспомните, <b>где</b> оформляли: на сайте, в App Store, в Google Play, через банк или оператора. Отменять нужно там же.</li>
+          <li>Найдите в профиле сервиса раздел «Подписки», «Оплата» или «Автопродление» и отключите его.</li>
+          <li>Сделайте скриншот подтверждения отмены — он пригодится, если спишут снова.</li>
+          <li>Если кнопки нет — напишите в поддержку с требованием отключить автопродление и сохраните переписку.</li>
+          <li>Удалите карту из сервиса и проверьте автоплатежи в приложении банка.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="refund" class="panel">
+      <div class="card">
+        <h2>Деньги уже списали — что делать</h2>
+        <ol class="steps">
+          <li><b>Сразу отключите автопродление</b>, чтобы не списали ещё раз. Сохраните скриншоты: список подписок, дату и сумму списания.</li>
+          <li><b>Напишите в поддержку сервиса</b> и потребуйте возврат. Особенно если вы подпиской не пользовались или отменили её, а деньги всё равно сняли.</li>
+          <li><b>Не помогло — отправьте письменную претензию.</b> Её можно составить за минуту во вкладке <a href="#" data-goto="claim">«Претензия»</a>. Сохраните доказательство отправки: письмо, скриншот формы, почтовую квитанцию.</li>
+          <li><b>Оспорьте операцию в банке</b>, если вы на списание не соглашались. Чем быстрее, тем лучше: в приложении банка обычно есть кнопка «Оспорить операцию» / «Не узнаю операцию».</li>
+          <li><b>Пожалуйтесь в Роспотребнадзор</b>, если сервис не отвечает или отказывает: <a href="https://petition.rospotrebnadzor.ru/" target="_blank" rel="noopener">электронная приёмная</a>. Если подписку навязал сам банк — <a href="https://www.cbr.ru/reception/" target="_blank" rel="noopener">интернет-приёмная Банка России</a>.</li>
+          <li><b>Суд</b> — крайний вариант. По спорам о защите прав потребителей госпошлина при иске до 1 млн ₽ не платится.</li>
+        </ol>
+        <h3>Что стоит знать</h3>
+        <ul>
+          <li>Вы можете отказаться от платной услуги в любой момент. Исполнитель вправе удержать только фактически понесённые расходы (ст. 32 Закона «О защите прав потребителей»).</li>
+          <li>Подключать дополнительные платные услуги без вашего согласия запрещено (ст. 16 того же закона). Если «согласие» было галочкой, поставленной заранее, это аргумент в вашу пользу.</li>
+          <li>Платные подписки от оператора связи можно оспорить у оператора: требуйте возврат и запрет контентных услуг на номере.</li>
+        </ul>
+        <p class="muted">Это не юридическая консультация, а памятка. В сложных случаях обратитесь в общество защиты прав потребителей — там часто консультируют бесплатно.</p>
+      </div>
+    </section>
+
+    <section id="claim" class="panel">
+      <div class="card">
+        <h2>Претензия о возврате денег за подписку</h2>
+        <p class="muted">Заполните поля, и текст соберётся сам. Данные никуда не отправляются и остаются в вашем браузере.</p>
+        <form id="claim-form" class="form">
+          <label>Сервис / компания<input name="company" placeholder="ООО «Пример», сервис «Пример ТВ»"></label>
+          <label>Ваше ФИО<input name="name" placeholder="Иванов Иван Иванович"></label>
+          <label>Контакты для ответа<input name="contact" placeholder="email или почтовый адрес"></label>
+          <label>Аккаунт / телефон / последние 4 цифры карты<input name="account" placeholder="+7 900 000-00-00, карта *1234"></label>
+          <div class="row">
+            <label>Дата списания<input name="date" type="date"></label>
+            <label>Сумма, ₽<input name="amount" type="number" min="0" step="0.01" placeholder="399"></label>
+          </div>
+          <label>Что случилось
+            <select name="reason">
+              <option value="unauthorized">Подписку не оформлял(а), согласия не давал(а)</option>
+              <option value="cancelled">Подписку отменил(а), но деньги всё равно списали</option>
+              <option value="trial">Пробный период превратился в платный без внятного предупреждения</option>
+              <option value="unused">Подписка продлилась, но я ей не пользовался(ась) и отказываюсь</option>
+            </select>
+          </label>
+          <label>Подробности (необязательно)<textarea name="details" rows="3" placeholder="Например: отменил 12.10, есть скриншот"></textarea></label>
+        </form>
+        <h3>Готовый текст</h3>
+        <textarea id="claim-out" rows="18" readonly></textarea>
+        <div class="actions">
+          <button id="copy" type="button">Скопировать</button>
+          <button id="download" type="button" class="ghost">Скачать .txt</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Проект открытый и бесплатный. Код и данные — на <a href="https://github.com/VapikVap/otpishis" target="_blank" rel="noopener">GitHub</a>. Добавить сервис или поправить инструкцию может любой.</p>
+    <p id="tip" hidden>Если помогло — можно <a id="tip-link" href="#" target="_blank" rel="noopener">оставить на чай</a> ☕</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
