@@ -1,0 +1,18 @@
+name: Добавить сервис
+description: Нужного сервиса нет в каталоге
+labels: [new-service]
+body:
+  - type: input
+    id: service
+    attributes:
+      label: Сервис
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как отменить (если знаете)
+  - type: input
+    id: link
+    attributes:
+      label: Ссылка на официальную справку

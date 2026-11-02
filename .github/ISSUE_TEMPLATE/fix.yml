@@ -1,0 +1,22 @@
+name: Инструкция не совпадает
+description: Шаги устарели или неверные
+labels: [fix]
+body:
+  - type: input
+    id: service
+    attributes:
+      label: Сервис
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Как отменить сейчас
+      description: Шаги, которые сработали у вас. Можно приложить скриншоты, но замажьте личные данные.
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Где проверяли
+      placeholder: сайт / iPhone / Android / ТВ
